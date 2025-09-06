@@ -1,15 +1,6 @@
-#include <dt-bindings/zmk/matrix_transform.h>
 #include "cosmotyl.dtsi"
 
-/ {
-    chosen {
-        zmk,kscan = &default_kscan;
-    };
-
-    default_kscan: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "default_kscan";
-        diode-direction = "col2row";
+&kscan {
 
         row-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
@@ -23,5 +14,4 @@
                     <&pro_micro 4 GPIO_ACTIVE_HIGH>,
                     <&pro_micro 3 GPIO_ACTIVE_HIGH>,
                     <&pro_micro 2 GPIO_ACTIVE_HIGH>;
-    };
 };
