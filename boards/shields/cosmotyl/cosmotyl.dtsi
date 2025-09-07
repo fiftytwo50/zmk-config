@@ -21,4 +21,9 @@
         
         >;
     };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diodie-direction = "col2row";
+    }
 };
